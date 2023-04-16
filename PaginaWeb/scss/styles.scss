@@ -1,1 +1,31 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+.barraMenu {
+    @extend .navbar;
+    @extend .navbar-dark;
+    @extend .navbar-expand-lg;
+    background: $dark;
+}
+//button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+.botonDesplegable {
+    @extend .navbar-toggler;
+    
+} 
+
+.letraTitulo {
+    @extend .navbar-brand;
+    color: white;
+}
+
+body {
+    background: #42275a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.botonLink {
+    a {
+        nav-left: $nav-link-color;
+    }
+}
+
