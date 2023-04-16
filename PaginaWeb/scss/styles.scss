@@ -9,7 +9,22 @@
 //button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
 .botonDesplegable {
     @extend .navbar-toggler;
-    
+}
+
+.menuDesplegado {
+    @extend .navbar-nav;
+    margin-left: auto;
+}
+
+.linkMenuDesplegado {
+    @extend .nav-link;
+    margin-left: auto;
+    color: gray;
+    padding-right: 5px;
+}
+
+.barraDesplegable {
+    @extend .navbar-collapse;
 } 
 
 .letraTitulo {
