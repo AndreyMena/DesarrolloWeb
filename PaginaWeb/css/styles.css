@@ -10839,7 +10839,12 @@ textarea.form-control-lg {
 }
 
 .customContainer {
-  background-color: rgb(90, 95, 207);
+  background-color: rgb(231, 249, 255);
+  border-radius: 10px;
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding: 30px;
 }
 
 .linkMenuDesplegado {
@@ -10850,11 +10855,24 @@ textarea.form-control-lg {
 
 .letraTitulo {
   color: white;
+  padding-left: 5px;
+}
+
+.centrarCentro {
+  text-align: center;
+}
+
+.centrarIzquierda {
+  text-align: left;
+}
+
+.centrarDerecha {
+  text-align: right;
 }
 
 body {
-  background: #42275a; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #3494E6; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .botonLink a {

@@ -18,7 +18,12 @@
 
 .customContainer {
     @extend .container;
-    background-color: rgb(90, 95, 207);
+    background-color: rgb(231, 249, 255);
+    border-radius: 10px;
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding: 30px;
 }
 
 .linkMenuDesplegado {
@@ -35,12 +40,42 @@
 .letraTitulo {
     @extend .navbar-brand;
     color: white;
+    padding-left: 5px;
+}
+
+.centrarCentro {
+    text-align: center;
+}
+
+.centrarIzquierda {
+    text-align: left;
+}
+
+.centrarDerecha {
+    text-align: right;
 }
 
 body {
-    background: #42275a;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+    //background: #4ECDC4;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to right, #556270, #4ECDC4);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to right, #556270, #4ECDC4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //favorita: vice city
+    background: #3494E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //background: #FC5C7D;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+    //background: #42275a;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to right, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to right, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
 
 .botonLink {
