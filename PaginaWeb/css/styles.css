@@ -10870,6 +10870,15 @@ textarea.form-control-lg {
   text-align: right;
 }
 
+.fotoCircular {
+  display: block;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body {
   background: #3494E6; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
