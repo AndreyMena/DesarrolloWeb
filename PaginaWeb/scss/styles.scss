@@ -57,9 +57,17 @@
 
 .fotoCircular {
     display: block;
-    width: 500px;
-    height: 500px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fotoNormal {
+    display: block;
+    width: 150px;
+    height: 150px;
     margin-left: auto;
     margin-right: auto;
 }
