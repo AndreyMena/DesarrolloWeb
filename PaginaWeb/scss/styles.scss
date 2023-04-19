@@ -11,6 +11,17 @@
     @extend .navbar-toggler;
 }
 
+.itemCentral {
+    @include make-container;
+    @extend .centrarCentro;
+    @include make-row;
+    justify-content: center;
+}
+
+.descripcion {
+    @include make-col(8);
+}
+
 .menuDesplegado {
     @extend .navbar-nav;
     margin-left: auto;
@@ -56,6 +67,7 @@
 }
 
 .fotoCircular {
+    @extend .img-fluid;
     display: block;
     width: 350px;
     height: 350px;
