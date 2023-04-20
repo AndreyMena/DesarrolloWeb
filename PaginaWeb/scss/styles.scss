@@ -37,6 +37,12 @@
     padding: 30px;
 }
 
+.carta {
+    @extend .card;
+    width: 20rem;
+    margin: 5px;
+}
+
 .linkMenuDesplegado {
     @extend .nav-link;
     margin-left: auto;
