@@ -10839,6 +10839,12 @@ textarea.form-control-lg {
   background: #212529;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 .itemCentral {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
