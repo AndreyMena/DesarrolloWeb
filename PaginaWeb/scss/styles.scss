@@ -1,4 +1,49 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
+$bg-dark: #343a40;
+$text-white: #fff;
+$spacer-y-0: 0 !default;
+$footer-padding-x: 1.5rem;
+$footer-padding-y: 1.5rem;
+$padding-bottom-0: 0;
+
+body {
+    position: relative;
+    min-height: 100vh;
+    //background: #4ECDC4;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to right, #556270, #4ECDC4);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to right, #556270, #4ECDC4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //favorita: vice city
+    background: #3494E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    //background: #FC5C7D;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+    //background: #42275a;  /* fallback for old browsers */
+    //background: -webkit-linear-gradient(to right, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
+    //background: linear-gradient(to right, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    background-color: $bg-dark;
+    text-align: center;
+    color: $text-white;
+}
+
+.footerContainer {
+    @extend .container;
+    padding: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding: $footer-padding-y $footer-padding-x;
+    padding-bottom: $padding-bottom-0;
+}
 
 .barraMenu {
     @extend .navbar;
@@ -10,12 +55,8 @@
 .botonDesplegable {
     @extend .navbar-toggler;
 }
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 40px;
-}
+
+
 
 .itemCentral {
     @include make-container;
@@ -38,6 +79,7 @@ footer {
     background-color: rgb(231, 249, 255);
     border-radius: 10px;
     margin-top: 40px;
+    margin-bottom: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
     padding: 30px;
@@ -46,7 +88,7 @@ footer {
 .carta {
     @extend .card;
     width: 20rem;
-    margin: 5px;
+    margin: 20px;
 }
 
 .linkMenuDesplegado {
@@ -96,26 +138,7 @@ footer {
     margin-right: auto;
 }
 
-body {
-    //background: #4ECDC4;  /* fallback for old browsers */
-    //background: -webkit-linear-gradient(to right, #556270, #4ECDC4);  /* Chrome 10-25, Safari 5.1-6 */
-    //background: linear-gradient(to right, #556270, #4ECDC4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    //favorita: vice city
-    background: #3494E6;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    //background: #FC5C7D;  /* fallback for old browsers */
-    //background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
-    //background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-    
-    //background: #42275a;  /* fallback for old browsers */
-    //background: -webkit-linear-gradient(to right, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
-    //background: linear-gradient(to right, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-}
 
 .botonLink {
     a {
