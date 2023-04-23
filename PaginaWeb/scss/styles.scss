@@ -65,6 +65,14 @@ footer {
     justify-content: center;
 }
 
+.contenidoCentral {
+    @extend .container;
+    @extend .centrarCentro;
+    margin: 0 auto;
+    max-width: 600px;
+    justify-content: center;
+}
+
 .descripcion {
     @include make-col(8);
 }
@@ -90,6 +98,13 @@ footer {
     @extend .card;
     width: 20rem;
     margin: 20px;
+}
+
+.cartaGrande {
+    @extend .card;
+    margin: 20px;
+    max-width: 100%;
+    height: auto;
 }
 
 .linkMenuDesplegado {
