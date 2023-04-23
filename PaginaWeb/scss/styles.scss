@@ -22,10 +22,15 @@ body {
     background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    //background: #FC5C7D;  /* fallback for old browsers */
-    //background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
-    //background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     
     //background: #42275a;  /* fallback for old browsers */
     //background: -webkit-linear-gradient(to right, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
@@ -92,6 +97,9 @@ footer {
     margin-bottom: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
+
+
+    
 }
 
 .carta {
@@ -134,6 +142,17 @@ footer {
 
 .centrarDerecha {
     text-align: right;
+}
+
+.icon {
+    @extend .img-fluid;
+    max-width: 200px;
+    max-height: 75px;
+    margin: 10px;
+}
+
+.link {
+    @extend .nav-link;
 }
 
 .fotoCircular {
