@@ -2315,7 +2315,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .btn-check:disabled + .btn {
+.btn-check[disabled] + .btn, .btn-check[disabled] + .btnDark, .btn-check[disabled] + .botoLuminoso, .btn-check:disabled + .btn, .btn-check:disabled + .btnDark, .btn-check:disabled + .botoLuminoso {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -2510,11 +2510,11 @@ textarea.form-control-lg {
 .input-group > .form-floating:focus-within {
   z-index: 5;
 }
-.input-group .btn {
+.input-group .btn, .input-group .btnDark, .input-group .botoLuminoso {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus {
+.input-group .btn:focus, .input-group .btnDark:focus, .input-group .botoLuminoso:focus {
   z-index: 5;
 }
 
@@ -2536,7 +2536,9 @@ textarea.form-control-lg {
 .input-group-lg > .form-control,
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
-.input-group-lg > .btn {
+.input-group-lg > .btn,
+.input-group-lg > .btnDark,
+.input-group-lg > .botoLuminoso {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.5rem;
@@ -2545,7 +2547,9 @@ textarea.form-control-lg {
 .input-group-sm > .form-control,
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
-.input-group-sm > .btn {
+.input-group-sm > .btn,
+.input-group-sm > .btnDark,
+.input-group-sm > .botoLuminoso {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.25rem;
@@ -2761,7 +2765,7 @@ textarea.form-control-lg {
   z-index: 4;
 }
 
-.btn {
+.btn, .btnDark, .botoLuminoso {
   --bs-btn-padding-x: 0.75rem;
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
@@ -2797,41 +2801,41 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn {
+  .btn, .btnDark, .botoLuminoso {
     transition: none;
   }
 }
-.btn:hover {
+.btn:hover, .btnDark:hover, .botoLuminoso:hover {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
 }
-.btn-check + .btn:hover {
+.btn-check + .btn:hover, .btn-check + .btnDark:hover, .btn-check + .botoLuminoso:hover {
   color: var(--bs-btn-color);
   background-color: var(--bs-btn-bg);
   border-color: var(--bs-btn-border-color);
 }
-.btn:focus-visible {
+.btn:focus-visible, .btnDark:focus-visible, .botoLuminoso:focus-visible {
   color: var(--bs-btn-hover-color);
   background-color: var(--bs-btn-hover-bg);
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:focus-visible + .btn {
+.btn-check:focus-visible + .btn, .btn-check:focus-visible + .btnDark, .btn-check:focus-visible + .botoLuminoso {
   border-color: var(--bs-btn-hover-border-color);
   outline: 0;
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+.btn-check:checked + .btn, .btn-check:checked + .btnDark, .btn-check:checked + .botoLuminoso, :not(.btn-check) + .btn:active, :not(.btn-check) + .btnDark:active, :not(.btn-check) + .botoLuminoso:active, .btn:first-child:active, .btnDark:first-child:active, .botoLuminoso:first-child:active, .btn.active, .active.btnDark, .active.botoLuminoso, .btn.show, .show.btnDark, .show.botoLuminoso {
   color: var(--bs-btn-active-color);
   background-color: var(--bs-btn-active-bg);
   border-color: var(--bs-btn-active-border-color);
 }
-.btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
+.btn-check:checked + .btn:focus-visible, .btn-check:checked + .btnDark:focus-visible, .btn-check:checked + .botoLuminoso:focus-visible, :not(.btn-check) + .btn:active:focus-visible, :not(.btn-check) + .btnDark:active:focus-visible, :not(.btn-check) + .botoLuminoso:active:focus-visible, .btn:first-child:active:focus-visible, .btnDark:first-child:active:focus-visible, .botoLuminoso:first-child:active:focus-visible, .btn.active:focus-visible, .active.btnDark:focus-visible, .active.botoLuminoso:focus-visible, .btn.show:focus-visible, .show.btnDark:focus-visible, .show.botoLuminoso:focus-visible {
   box-shadow: var(--bs-btn-focus-box-shadow);
 }
-.btn:disabled, .btn.disabled, fieldset:disabled .btn {
+.btn:disabled, .btnDark:disabled, .botoLuminoso:disabled, .btn.disabled, .disabled.btnDark, .disabled.botoLuminoso, fieldset:disabled .btn, fieldset:disabled .btnDark, fieldset:disabled .botoLuminoso {
   color: var(--bs-btn-disabled-color);
   pointer-events: none;
   background-color: var(--bs-btn-disabled-bg);
@@ -2958,7 +2962,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: #f8f9fa;
 }
 
-.btn-dark {
+.btn-dark, .btnDark {
   --bs-btn-color: #fff;
   --bs-btn-bg: #212529;
   --bs-btn-border-color: #212529;
@@ -3077,7 +3081,7 @@ textarea.form-control-lg {
   --bs-gradient: none;
 }
 
-.btn-outline-light {
+.btn-outline-light, .botoLuminoso {
   --bs-btn-color: #f8f9fa;
   --bs-btn-border-color: #f8f9fa;
   --bs-btn-hover-color: #000;
@@ -3133,14 +3137,14 @@ textarea.form-control-lg {
   color: var(--bs-btn-hover-color);
 }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .btnDark, .btn-group-lg > .botoLuminoso {
   --bs-btn-padding-y: 0.5rem;
   --bs-btn-padding-x: 1rem;
   --bs-btn-font-size: 1.25rem;
   --bs-btn-border-radius: 0.5rem;
 }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .btnDark, .btn-group-sm > .botoLuminoso {
   --bs-btn-padding-y: 0.25rem;
   --bs-btn-padding-x: 0.5rem;
   --bs-btn-font-size: 0.875rem;
@@ -3506,23 +3510,47 @@ textarea.form-control-lg {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn,
-.btn-group-vertical > .btn {
+.btn-group > .btn, .btn-group > .btnDark, .btn-group > .botoLuminoso,
+.btn-group-vertical > .btn,
+.btn-group-vertical > .btnDark,
+.btn-group-vertical > .botoLuminoso {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn,
+.btn-group > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .btnDark, .btn-group > .btn-check:checked + .botoLuminoso,
 .btn-group > .btn-check:focus + .btn,
+.btn-group > .btn-check:focus + .btnDark,
+.btn-group > .btn-check:focus + .botoLuminoso,
 .btn-group > .btn:hover,
+.btn-group > .btnDark:hover,
+.btn-group > .botoLuminoso:hover,
 .btn-group > .btn:focus,
+.btn-group > .btnDark:focus,
+.btn-group > .botoLuminoso:focus,
 .btn-group > .btn:active,
+.btn-group > .btnDark:active,
+.btn-group > .botoLuminoso:active,
 .btn-group > .btn.active,
+.btn-group > .active.btnDark,
+.btn-group > .active.botoLuminoso,
 .btn-group-vertical > .btn-check:checked + .btn,
+.btn-group-vertical > .btn-check:checked + .btnDark,
+.btn-group-vertical > .btn-check:checked + .botoLuminoso,
 .btn-group-vertical > .btn-check:focus + .btn,
+.btn-group-vertical > .btn-check:focus + .btnDark,
+.btn-group-vertical > .btn-check:focus + .botoLuminoso,
 .btn-group-vertical > .btn:hover,
+.btn-group-vertical > .btnDark:hover,
+.btn-group-vertical > .botoLuminoso:hover,
 .btn-group-vertical > .btn:focus,
+.btn-group-vertical > .btnDark:focus,
+.btn-group-vertical > .botoLuminoso:focus,
 .btn-group-vertical > .btn:active,
-.btn-group-vertical > .btn.active {
+.btn-group-vertical > .btnDark:active,
+.btn-group-vertical > .botoLuminoso:active,
+.btn-group-vertical > .btn.active,
+.btn-group-vertical > .active.btnDark,
+.btn-group-vertical > .active.botoLuminoso {
   z-index: 1;
 }
 
@@ -3538,19 +3566,27 @@ textarea.form-control-lg {
 .btn-group {
   border-radius: 0.375rem;
 }
-.btn-group > :not(.btn-check:first-child) + .btn,
+.btn-group > :not(.btn-check:first-child) + .btn, .btn-group > :not(.btn-check:first-child) + .btnDark, .btn-group > :not(.btn-check:first-child) + .botoLuminoso,
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btnDark:not(:last-child):not(.dropdown-toggle), .btn-group > .botoLuminoso:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn.dropdown-toggle-split:first-child,
-.btn-group > .btn-group:not(:last-child) > .btn {
+.btn-group > .dropdown-toggle-split.btnDark:first-child,
+.btn-group > .dropdown-toggle-split.botoLuminoso:first-child,
+.btn-group > .btn-group:not(:last-child) > .btn,
+.btn-group > .btn-group:not(:last-child) > .btnDark,
+.btn-group > .btn-group:not(:last-child) > .botoLuminoso {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group > .btn:nth-child(n+3),
+.btn-group > .btn:nth-child(n+3), .btn-group > .btnDark:nth-child(n+3), .btn-group > .botoLuminoso:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
-.btn-group > .btn-group:not(:first-child) > .btn {
+.btn-group > :not(.btn-check) + .btnDark,
+.btn-group > :not(.btn-check) + .botoLuminoso,
+.btn-group > .btn-group:not(:first-child) > .btn,
+.btn-group > .btn-group:not(:first-child) > .btnDark,
+.btn-group > .btn-group:not(:first-child) > .botoLuminoso {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -3566,12 +3602,12 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .btnDark + .dropdown-toggle-split, .btn-group-sm > .botoLuminoso + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .btnDark + .dropdown-toggle-split, .btn-group-lg > .botoLuminoso + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -3581,21 +3617,25 @@ textarea.form-control-lg {
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn,
+.btn-group-vertical > .btn, .btn-group-vertical > .btnDark, .btn-group-vertical > .botoLuminoso,
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .btnDark:not(:first-child), .btn-group-vertical > .botoLuminoso:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-.btn-group-vertical > .btn-group:not(:last-child) > .btn {
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .btnDark:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .botoLuminoso:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn-group:not(:last-child) > .btn,
+.btn-group-vertical > .btn-group:not(:last-child) > .btnDark,
+.btn-group-vertical > .btn-group:not(:last-child) > .botoLuminoso {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group-vertical > .btn ~ .btn,
-.btn-group-vertical > .btn-group:not(:first-child) > .btn {
+.btn-group-vertical > .btn ~ .btn, .btn-group-vertical > .btnDark ~ .btn, .btn-group-vertical > .btn ~ .btnDark, .btn-group-vertical > .btnDark ~ .btnDark, .btn-group-vertical > .botoLuminoso ~ .btn, .btn-group-vertical > .botoLuminoso ~ .btnDark, .btn-group-vertical > .btn ~ .botoLuminoso, .btn-group-vertical > .btnDark ~ .botoLuminoso, .btn-group-vertical > .botoLuminoso ~ .botoLuminoso,
+.btn-group-vertical > .btn-group:not(:first-child) > .btn,
+.btn-group-vertical > .btn-group:not(:first-child) > .btnDark,
+.btn-group-vertical > .btn-group:not(:first-child) > .botoLuminoso {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -4161,7 +4201,7 @@ textarea.form-control-lg {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.card, .cartaGrande, .carta {
+.card, .cartaGrande, cardCourses, .carta {
   --bs-card-spacer-y: 1rem;
   --bs-card-spacer-x: 1rem;
   --bs-card-title-spacer-y: 0.5rem;
@@ -4190,27 +4230,28 @@ textarea.form-control-lg {
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
 }
-.card > hr, .cartaGrande > hr, .carta > hr {
+.card > hr, .cartaGrande > hr, cardCourses > hr, .carta > hr {
   margin-right: 0;
   margin-left: 0;
 }
-.card > .list-group, .cartaGrande > .list-group, .carta > .list-group {
+.card > .list-group, .cartaGrande > .list-group, cardCourses > .list-group, .carta > .list-group {
   border-top: inherit;
   border-bottom: inherit;
 }
-.card > .list-group:first-child, .cartaGrande > .list-group:first-child, .carta > .list-group:first-child {
+.card > .list-group:first-child, .cartaGrande > .list-group:first-child, cardCourses > .list-group:first-child, .carta > .list-group:first-child {
   border-top-width: 0;
   border-top-left-radius: var(--bs-card-inner-border-radius);
   border-top-right-radius: var(--bs-card-inner-border-radius);
 }
-.card > .list-group:last-child, .cartaGrande > .list-group:last-child, .carta > .list-group:last-child {
+.card > .list-group:last-child, .cartaGrande > .list-group:last-child, cardCourses > .list-group:last-child, .carta > .list-group:last-child {
   border-bottom-width: 0;
   border-bottom-right-radius: var(--bs-card-inner-border-radius);
   border-bottom-left-radius: var(--bs-card-inner-border-radius);
 }
-.card > .card-header + .list-group, .cartaGrande > .card-header + .list-group, .carta > .card-header + .list-group,
+.card > .card-header + .list-group, .card > .cardHeader + .list-group, .cartaGrande > .card-header + .list-group, .cartaGrande > .cardHeader + .list-group, cardCourses > .card-header + .list-group, cardCourses > .cardHeader + .list-group, .carta > .card-header + .list-group, .carta > .cardHeader + .list-group,
 .card > .list-group + .card-footer,
 .cartaGrande > .list-group + .card-footer,
+cardCourses > .list-group + .card-footer,
 .carta > .list-group + .card-footer {
   border-top: 0;
 }
@@ -4238,14 +4279,14 @@ textarea.form-control-lg {
   margin-left: var(--bs-card-spacer-x);
 }
 
-.card-header {
+.card-header, .cardHeader {
   padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
   margin-bottom: 0;
   color: var(--bs-card-cap-color);
   background-color: var(--bs-card-cap-bg);
   border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
 }
-.card-header:first-child {
+.card-header:first-child, .cardHeader:first-child {
   border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
 }
 
@@ -4303,7 +4344,7 @@ textarea.form-control-lg {
   border-bottom-left-radius: var(--bs-card-inner-border-radius);
 }
 
-.card-group > .card, .card-group > .cartaGrande, .card-group > .carta {
+.card-group > .card, .card-group > .cartaGrande, .card-group > cardCourses, .card-group > .carta {
   margin-bottom: var(--bs-card-group-margin);
 }
 @media (min-width: 576px) {
@@ -4311,43 +4352,55 @@ textarea.form-control-lg {
     display: flex;
     flex-flow: row wrap;
   }
-  .card-group > .card, .card-group > .cartaGrande, .card-group > .carta {
+  .card-group > .card, .card-group > .cartaGrande, .card-group > cardCourses, .card-group > .carta {
     flex: 1 0 0%;
     margin-bottom: 0;
   }
-  .card-group > .card + .card, .card-group > .cartaGrande + .card, .card-group > .card + .cartaGrande, .card-group > .cartaGrande + .cartaGrande, .card-group > .carta + .card, .card-group > .carta + .cartaGrande, .card-group > .card + .carta, .card-group > .cartaGrande + .carta, .card-group > .carta + .carta {
+  .card-group > .card + .card, .card-group > .cartaGrande + .card, .card-group > .card + .cartaGrande, .card-group > .cartaGrande + .cartaGrande, .card-group > cardCourses + .card, .card-group > cardCourses + .cartaGrande, .card-group > .card + cardCourses, .card-group > .cartaGrande + cardCourses, .card-group > cardCourses + cardCourses, .card-group > .carta + .card, .card-group > .carta + .cartaGrande, .card-group > .carta + cardCourses, .card-group > .card + .carta, .card-group > .cartaGrande + .carta, .card-group > cardCourses + .carta, .card-group > .carta + .carta {
     margin-left: 0;
     border-left: 0;
   }
-  .card-group > .card:not(:last-child), .card-group > .cartaGrande:not(:last-child), .card-group > .carta:not(:last-child) {
+  .card-group > .card:not(:last-child), .card-group > .cartaGrande:not(:last-child), .card-group > cardCourses:not(:last-child), .card-group > .carta:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-top, .card-group > .cartaGrande:not(:last-child) .card-img-top, .card-group > .carta:not(:last-child) .card-img-top,
+  .card-group > .card:not(:last-child) .card-img-top, .card-group > .cartaGrande:not(:last-child) .card-img-top, .card-group > cardCourses:not(:last-child) .card-img-top, .card-group > .carta:not(:last-child) .card-img-top,
   .card-group > .card:not(:last-child) .card-header,
+  .card-group > .card:not(:last-child) .cardHeader,
   .card-group > .cartaGrande:not(:last-child) .card-header,
-  .card-group > .carta:not(:last-child) .card-header {
+  .card-group > .cartaGrande:not(:last-child) .cardHeader,
+  .card-group > cardCourses:not(:last-child) .card-header,
+  .card-group > cardCourses:not(:last-child) .cardHeader,
+  .card-group > .carta:not(:last-child) .card-header,
+  .card-group > .carta:not(:last-child) .cardHeader {
     border-top-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-bottom, .card-group > .cartaGrande:not(:last-child) .card-img-bottom, .card-group > .carta:not(:last-child) .card-img-bottom,
+  .card-group > .card:not(:last-child) .card-img-bottom, .card-group > .cartaGrande:not(:last-child) .card-img-bottom, .card-group > cardCourses:not(:last-child) .card-img-bottom, .card-group > .carta:not(:last-child) .card-img-bottom,
   .card-group > .card:not(:last-child) .card-footer,
   .card-group > .cartaGrande:not(:last-child) .card-footer,
+  .card-group > cardCourses:not(:last-child) .card-footer,
   .card-group > .carta:not(:last-child) .card-footer {
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:first-child), .card-group > .cartaGrande:not(:first-child), .card-group > .carta:not(:first-child) {
+  .card-group > .card:not(:first-child), .card-group > .cartaGrande:not(:first-child), .card-group > cardCourses:not(:first-child), .card-group > .carta:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-top, .card-group > .cartaGrande:not(:first-child) .card-img-top, .card-group > .carta:not(:first-child) .card-img-top,
+  .card-group > .card:not(:first-child) .card-img-top, .card-group > .cartaGrande:not(:first-child) .card-img-top, .card-group > cardCourses:not(:first-child) .card-img-top, .card-group > .carta:not(:first-child) .card-img-top,
   .card-group > .card:not(:first-child) .card-header,
+  .card-group > .card:not(:first-child) .cardHeader,
   .card-group > .cartaGrande:not(:first-child) .card-header,
-  .card-group > .carta:not(:first-child) .card-header {
+  .card-group > .cartaGrande:not(:first-child) .cardHeader,
+  .card-group > cardCourses:not(:first-child) .card-header,
+  .card-group > cardCourses:not(:first-child) .cardHeader,
+  .card-group > .carta:not(:first-child) .card-header,
+  .card-group > .carta:not(:first-child) .cardHeader {
     border-top-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-bottom, .card-group > .cartaGrande:not(:first-child) .card-img-bottom, .card-group > .carta:not(:first-child) .card-img-bottom,
+  .card-group > .card:not(:first-child) .card-img-bottom, .card-group > .cartaGrande:not(:first-child) .card-img-bottom, .card-group > cardCourses:not(:first-child) .card-img-bottom, .card-group > .carta:not(:first-child) .card-img-bottom,
   .card-group > .card:not(:first-child) .card-footer,
   .card-group > .cartaGrande:not(:first-child) .card-footer,
+  .card-group > cardCourses:not(:first-child) .card-footer,
   .card-group > .carta:not(:first-child) .card-footer {
     border-bottom-left-radius: 0;
   }
@@ -4636,7 +4689,7 @@ textarea.form-control-lg {
   display: none;
 }
 
-.btn .badge {
+.btn .badge, .btnDark .badge, .botoLuminoso .badge {
   position: relative;
   top: -1px;
 }
@@ -6630,7 +6683,7 @@ textarea.form-control-lg {
   background-color: currentcolor;
   opacity: 0.5;
 }
-.placeholder.btn::before {
+.placeholder.btn::before, .placeholder.btnDark::before, .placeholder.botoLuminoso::before {
   display: inline-block;
   content: "";
 }
@@ -10902,7 +10955,7 @@ footer {
   justify-content: center;
 }
 
-.primaryText, .centrarCentro, .itemCentral, .contenidoCentral {
+.primaryText, .centrarCentro, .itemCentral, .contenidoCentral, .footerDown {
   font-family: "Comfortaa", cursive;
   font-weight: 500;
 }
@@ -10939,8 +10992,26 @@ footer {
   background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.sizeFooter {
+  margin-bottom: 1.5rem;
+}
+
+.footerDown {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.botoLuminoso {
+  margin: 0.25rem;
+}
+
 .carta {
   width: 20rem;
+  margin: 20px;
+}
+
+cardCourses {
+  width: 25rem;
   margin: 20px;
 }
 
@@ -10948,6 +11019,12 @@ footer {
   margin: 20px;
   max-width: 100%;
   height: auto;
+}
+
+.cardHeader {
+  background-color: #fff;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .linkMenuDesplegado {
@@ -10961,7 +11038,7 @@ footer {
   padding-left: 5px;
 }
 
-.centrarCentro, .itemCentral, .contenidoCentral {
+.centrarCentro, .itemCentral, .contenidoCentral, .footerDown {
   text-align: center;
 }
 

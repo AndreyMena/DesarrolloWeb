@@ -122,9 +122,24 @@ footer {
     background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     background: #E0EAFC;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
+.sizeFooter {
+    margin-bottom: 1.5rem;
+}
+
+.footerDown {
+    @extend .centrarCentro;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.botoLuminoso {
+    @extend .btn;
+    @extend .btn-outline-light;
+    margin: 0.25rem;
 }
 
 .carta {
@@ -133,11 +148,29 @@ background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, F
     margin: 20px;
 }
 
+cardCourses {
+    @extend .card;
+    width: 25rem;
+    margin: 20px;
+}
+
+.btnDark {
+    @extend .btn;
+    @extend .btn-dark
+}
+
 .cartaGrande {
     @extend .card;
     margin: 20px;
     max-width: 100%;
     height: auto;
+}
+
+.cardHeader {
+    @extend .card-header;
+    background-color: #fff;
+    padding-top: 18px;
+    padding-bottom: 18px;
 }
 
 .linkMenuDesplegado {
