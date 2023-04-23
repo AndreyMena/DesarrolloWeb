@@ -36,7 +36,6 @@ body {
 footer {
     position: absolute;
     width: 100%;
-    
     background-color: $bg-dark;
     text-align: center;
     color: $text-white;
@@ -44,12 +43,9 @@ footer {
 
 .footerContainer {
     @extend .container;
-    padding: 1.5rem;
-    padding-bottom: 1.5rem;
     padding: $footer-padding-y $footer-padding-x;
     padding-bottom: $padding-bottom-0;
 }
-
 
 .barraMenu {
     @extend .navbar;
@@ -57,12 +53,10 @@ footer {
     @extend .navbar-expand-lg;
     background: $dark;
 }
-//button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+
 .botonDesplegable {
     @extend .navbar-toggler;
 }
-
-
 
 .itemCentral {
     @include make-container;
@@ -90,7 +84,6 @@ footer {
     margin-bottom: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
-    padding: 30px;
 }
 
 .carta {

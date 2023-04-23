@@ -10855,8 +10855,6 @@ footer {
 }
 
 .footerContainer {
-  padding: 1.5rem;
-  padding-bottom: 1.5rem;
   padding: 1.5rem 1.5rem;
   padding-bottom: 0;
 }
@@ -10901,7 +10899,6 @@ footer {
   margin-bottom: 40px;
   padding-top: 40px;
   padding-bottom: 40px;
-  padding: 30px;
 }
 
 .carta {
