@@ -10835,9 +10835,13 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+html {
+  height: 100%;
+}
+
 body {
   position: relative;
-  min-height: 100vh;
+  height: 100%;
   background: #3494E6; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
@@ -10889,6 +10893,8 @@ footer {
 }
 
 .customContainer {
+  position: relative;
+  min-height: 100%;
   background-color: rgb(231, 249, 255);
   border-radius: 10px;
   margin-top: 40px;
