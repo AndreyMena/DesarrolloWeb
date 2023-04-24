@@ -64,11 +64,12 @@ footer {
 .linkMenuDropdown {
     @extend .nav-link;
     @extend .dropdown-toggle;
-    
+    @extend .centrarDerecha;
 }
 
 .dropdownMenu {
-    @extend .dropdown-menu;
+    @extend .dropdown-menu-dark;
+    @extend .dropdown-menu-end;
 }
 
 .botonDesplegable {

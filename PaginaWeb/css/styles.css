@@ -2560,7 +2560,7 @@ textarea.form-control-lg {
   padding-right: 3rem;
 }
 
-.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.linkMenuDropdown):not(.dropdown-menu):not(.dropdownMenu):not(.form-floating),
+.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.linkMenuDropdown):not(.dropdown-menu):not(.form-floating),
 .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3),
 .input-group:not(.has-validation) > .linkMenuDropdown:nth-last-child(n+3),
 .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-control,
@@ -2568,7 +2568,7 @@ textarea.form-control-lg {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.input-group.has-validation > :nth-last-child(n+3):not(.dropdown-toggle):not(.linkMenuDropdown):not(.dropdown-menu):not(.dropdownMenu):not(.form-floating),
+.input-group.has-validation > :nth-last-child(n+3):not(.dropdown-toggle):not(.linkMenuDropdown):not(.dropdown-menu):not(.form-floating),
 .input-group.has-validation > .dropdown-toggle:nth-last-child(n+4),
 .input-group.has-validation > .linkMenuDropdown:nth-last-child(n+4),
 .input-group.has-validation > .form-floating:nth-last-child(n+3) > .form-control,
@@ -2576,7 +2576,7 @@ textarea.form-control-lg {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.input-group > :not(:first-child):not(.dropdown-menu):not(.dropdownMenu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+.input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
   margin-left: -1px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -3216,7 +3216,7 @@ textarea.form-control-lg {
   margin-left: 0;
 }
 
-.dropdown-menu, .dropdownMenu {
+.dropdown-menu {
   --bs-dropdown-zindex: 1000;
   --bs-dropdown-min-width: 10rem;
   --bs-dropdown-padding-x: 0;
@@ -3258,7 +3258,7 @@ textarea.form-control-lg {
   border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
   border-radius: var(--bs-dropdown-border-radius);
 }
-.dropdown-menu[data-bs-popper], [data-bs-popper].dropdownMenu {
+.dropdown-menu[data-bs-popper] {
   top: 100%;
   left: 0;
   margin-top: var(--bs-dropdown-spacer);
@@ -3272,10 +3272,10 @@ textarea.form-control-lg {
   left: 0;
 }
 
-.dropdown-menu-end {
+.dropdown-menu-end, .dropdownMenu {
   --bs-position: end;
 }
-.dropdown-menu-end[data-bs-popper] {
+.dropdown-menu-end[data-bs-popper], [data-bs-popper].dropdownMenu {
   right: 0;
   left: auto;
 }
@@ -3360,7 +3360,7 @@ textarea.form-control-lg {
     left: auto;
   }
 }
-.dropup .dropdown-menu[data-bs-popper], .dropup [data-bs-popper].dropdownMenu {
+.dropup .dropdown-menu[data-bs-popper] {
   top: auto;
   bottom: 100%;
   margin-top: 0;
@@ -3380,7 +3380,7 @@ textarea.form-control-lg {
   margin-left: 0;
 }
 
-.dropend .dropdown-menu[data-bs-popper], .dropend [data-bs-popper].dropdownMenu {
+.dropend .dropdown-menu[data-bs-popper] {
   top: 0;
   right: auto;
   left: 100%;
@@ -3404,7 +3404,7 @@ textarea.form-control-lg {
   vertical-align: 0;
 }
 
-.dropstart .dropdown-menu[data-bs-popper], .dropstart [data-bs-popper].dropdownMenu {
+.dropstart .dropdown-menu[data-bs-popper] {
   top: 0;
   right: 100%;
   left: auto;
@@ -3472,7 +3472,7 @@ textarea.form-control-lg {
   background-color: transparent;
 }
 
-.dropdown-menu.show, .show.dropdownMenu {
+.dropdown-menu.show {
   display: block;
 }
 
@@ -3491,7 +3491,7 @@ textarea.form-control-lg {
   color: var(--bs-dropdown-link-color);
 }
 
-.dropdown-menu-dark {
+.dropdown-menu-dark, .dropdownMenu {
   --bs-dropdown-color: #dee2e6;
   --bs-dropdown-bg: #343a40;
   --bs-dropdown-border-color: var(--bs-border-color-translucent);
@@ -3714,7 +3714,7 @@ textarea.form-control-lg {
   background-color: var(--bs-nav-tabs-link-active-bg);
   border-color: var(--bs-nav-tabs-link-active-border-color);
 }
-.nav-tabs .dropdown-menu, .nav-tabs .dropdownMenu {
+.nav-tabs .dropdown-menu {
   margin-top: calc(-1 * var(--bs-nav-tabs-border-width));
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -3855,7 +3855,7 @@ textarea.form-control-lg {
 .menuDesplegado .active.linkMenuDropdown {
   color: var(--bs-navbar-active-color);
 }
-.navbar-nav .dropdown-menu, .menuDesplegado .dropdown-menu, .navbar-nav .dropdownMenu, .menuDesplegado .dropdownMenu {
+.navbar-nav .dropdown-menu, .menuDesplegado .dropdown-menu {
   position: static;
 }
 
@@ -3924,7 +3924,7 @@ textarea.form-control-lg {
   .navbar-expand-sm .navbar-nav, .navbar-expand-sm .menuDesplegado {
     flex-direction: row;
   }
-  .navbar-expand-sm .navbar-nav .dropdown-menu, .navbar-expand-sm .menuDesplegado .dropdown-menu, .navbar-expand-sm .navbar-nav .dropdownMenu, .navbar-expand-sm .menuDesplegado .dropdownMenu {
+  .navbar-expand-sm .navbar-nav .dropdown-menu, .navbar-expand-sm .menuDesplegado .dropdown-menu {
     position: absolute;
   }
   .navbar-expand-sm .navbar-nav .nav-link, .navbar-expand-sm .navbar-nav .link, .navbar-expand-sm .navbar-nav .linkMenuDesplegado, .navbar-expand-sm .menuDesplegado .nav-link, .navbar-expand-sm .menuDesplegado .link, .navbar-expand-sm .menuDesplegado .linkMenuDesplegado, .navbar-expand-sm .navbar-nav .linkMenuDropdown, .navbar-expand-sm .menuDesplegado .linkMenuDropdown {
@@ -3971,7 +3971,7 @@ textarea.form-control-lg {
   .navbar-expand-md .navbar-nav, .navbar-expand-md .menuDesplegado {
     flex-direction: row;
   }
-  .navbar-expand-md .navbar-nav .dropdown-menu, .navbar-expand-md .menuDesplegado .dropdown-menu, .navbar-expand-md .navbar-nav .dropdownMenu, .navbar-expand-md .menuDesplegado .dropdownMenu {
+  .navbar-expand-md .navbar-nav .dropdown-menu, .navbar-expand-md .menuDesplegado .dropdown-menu {
     position: absolute;
   }
   .navbar-expand-md .navbar-nav .nav-link, .navbar-expand-md .navbar-nav .link, .navbar-expand-md .navbar-nav .linkMenuDesplegado, .navbar-expand-md .menuDesplegado .nav-link, .navbar-expand-md .menuDesplegado .link, .navbar-expand-md .menuDesplegado .linkMenuDesplegado, .navbar-expand-md .navbar-nav .linkMenuDropdown, .navbar-expand-md .menuDesplegado .linkMenuDropdown {
@@ -4018,7 +4018,7 @@ textarea.form-control-lg {
   .navbar-expand-lg .navbar-nav, .navbar-expand-lg .menuDesplegado, .barraMenu .navbar-nav, .barraMenu .menuDesplegado {
     flex-direction: row;
   }
-  .navbar-expand-lg .navbar-nav .dropdown-menu, .navbar-expand-lg .menuDesplegado .dropdown-menu, .navbar-expand-lg .navbar-nav .dropdownMenu, .navbar-expand-lg .menuDesplegado .dropdownMenu, .barraMenu .navbar-nav .dropdown-menu, .barraMenu .menuDesplegado .dropdown-menu, .barraMenu .navbar-nav .dropdownMenu, .barraMenu .menuDesplegado .dropdownMenu {
+  .navbar-expand-lg .navbar-nav .dropdown-menu, .navbar-expand-lg .menuDesplegado .dropdown-menu, .barraMenu .navbar-nav .dropdown-menu, .barraMenu .menuDesplegado .dropdown-menu {
     position: absolute;
   }
   .navbar-expand-lg .navbar-nav .nav-link, .navbar-expand-lg .navbar-nav .link, .navbar-expand-lg .navbar-nav .linkMenuDesplegado, .navbar-expand-lg .menuDesplegado .nav-link, .navbar-expand-lg .menuDesplegado .link, .navbar-expand-lg .menuDesplegado .linkMenuDesplegado, .navbar-expand-lg .navbar-nav .linkMenuDropdown, .navbar-expand-lg .menuDesplegado .linkMenuDropdown, .barraMenu .navbar-nav .nav-link, .barraMenu .navbar-nav .link, .barraMenu .navbar-nav .linkMenuDesplegado, .barraMenu .menuDesplegado .nav-link, .barraMenu .menuDesplegado .link, .barraMenu .menuDesplegado .linkMenuDesplegado, .barraMenu .navbar-nav .linkMenuDropdown, .barraMenu .menuDesplegado .linkMenuDropdown {
@@ -4065,7 +4065,7 @@ textarea.form-control-lg {
   .navbar-expand-xl .navbar-nav, .navbar-expand-xl .menuDesplegado {
     flex-direction: row;
   }
-  .navbar-expand-xl .navbar-nav .dropdown-menu, .navbar-expand-xl .menuDesplegado .dropdown-menu, .navbar-expand-xl .navbar-nav .dropdownMenu, .navbar-expand-xl .menuDesplegado .dropdownMenu {
+  .navbar-expand-xl .navbar-nav .dropdown-menu, .navbar-expand-xl .menuDesplegado .dropdown-menu {
     position: absolute;
   }
   .navbar-expand-xl .navbar-nav .nav-link, .navbar-expand-xl .navbar-nav .link, .navbar-expand-xl .navbar-nav .linkMenuDesplegado, .navbar-expand-xl .menuDesplegado .nav-link, .navbar-expand-xl .menuDesplegado .link, .navbar-expand-xl .menuDesplegado .linkMenuDesplegado, .navbar-expand-xl .navbar-nav .linkMenuDropdown, .navbar-expand-xl .menuDesplegado .linkMenuDropdown {
@@ -4112,7 +4112,7 @@ textarea.form-control-lg {
   .navbar-expand-xxl .navbar-nav, .navbar-expand-xxl .menuDesplegado {
     flex-direction: row;
   }
-  .navbar-expand-xxl .navbar-nav .dropdown-menu, .navbar-expand-xxl .menuDesplegado .dropdown-menu, .navbar-expand-xxl .navbar-nav .dropdownMenu, .navbar-expand-xxl .menuDesplegado .dropdownMenu {
+  .navbar-expand-xxl .navbar-nav .dropdown-menu, .navbar-expand-xxl .menuDesplegado .dropdown-menu {
     position: absolute;
   }
   .navbar-expand-xxl .navbar-nav .nav-link, .navbar-expand-xxl .navbar-nav .link, .navbar-expand-xxl .navbar-nav .linkMenuDesplegado, .navbar-expand-xxl .menuDesplegado .nav-link, .navbar-expand-xxl .menuDesplegado .link, .navbar-expand-xxl .menuDesplegado .linkMenuDesplegado, .navbar-expand-xxl .navbar-nav .linkMenuDropdown, .navbar-expand-xxl .menuDesplegado .linkMenuDropdown {
@@ -4158,7 +4158,7 @@ textarea.form-control-lg {
 .navbar-expand .navbar-nav, .navbar-expand .menuDesplegado {
   flex-direction: row;
 }
-.navbar-expand .navbar-nav .dropdown-menu, .navbar-expand .menuDesplegado .dropdown-menu, .navbar-expand .navbar-nav .dropdownMenu, .navbar-expand .menuDesplegado .dropdownMenu {
+.navbar-expand .navbar-nav .dropdown-menu, .navbar-expand .menuDesplegado .dropdown-menu {
   position: absolute;
 }
 .navbar-expand .navbar-nav .nav-link, .navbar-expand .navbar-nav .link, .navbar-expand .navbar-nav .linkMenuDesplegado, .navbar-expand .menuDesplegado .nav-link, .navbar-expand .menuDesplegado .link, .navbar-expand .menuDesplegado .linkMenuDesplegado, .navbar-expand .navbar-nav .linkMenuDropdown, .navbar-expand .menuDesplegado .linkMenuDropdown {
@@ -11053,7 +11053,7 @@ cardCourses {
   text-align: left;
 }
 
-.centrarDerecha {
+.centrarDerecha, .linkMenuDropdown {
   text-align: right;
 }
 
