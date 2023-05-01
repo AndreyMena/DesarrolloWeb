@@ -5,15 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
     <body>
-        <textarea id="comentario" maxlength="230" oninput="verificar(this, 230, document.getElementById('leyenda'));"></textarea>
+        <h4>Comentarios adicionales</h4>
+        <textarea id="comentario" cols="50" rows="12" oninput="verificar(this, 230, document.getElementById('leyenda'));"></textarea>
         <p id="maxCaracteres">Caracteres máximos: 230</p>
         <p id="leyenda">Usted tiene un espacio de 230 caracteres restantes.</p>
     </body>
-
-    <script lang="JavaScript">
-        function verificar(control, max, progressText) {
-            var contador = max - (control.value.length);
-            progressText.innerHTML = "Usted tiene un espacio de "+contador+" caracteres restantes.";
-        }
-    </script>
+    <script lang="JavaScript" src="js/scripts.js"></script>
 </html>
