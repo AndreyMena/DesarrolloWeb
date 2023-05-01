@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <textarea id="comentario" maxlength="230" oninput="verificar(this, 230, document.getElementById('leyenda'));"></textarea>
+        <p id="maxCaracteres">Caracteres máximos: 230</p>
+        <p id="leyenda">Usted tiene un espacio de 230 caracteres restantes.</p>
+    </body>
+
+    <script lang="JavaScript">
+        function verificar(control, max, progressText) {
+            var contador = max - (control.value.length);
+            progressText.innerHTML = "Usted tiene un espacio de "+contador+" caracteres restantes.";
+        }
+    </script>
+</html>
