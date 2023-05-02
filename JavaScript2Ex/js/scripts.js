@@ -12,17 +12,50 @@ customElements.define('mi-tarjeta',
     constructor() {
       super();
 
-      const shadowRoot = this.attachShadow({mode: 'open'});
+      const template = document.getElementById('mi-tarjeta-template');
+      const templateContent = template.content;
 
+      const shadowRoot = this.attachShadow({mode: 'open'});
+        
       const style = document.createElement('style');
       style.textContent = `
-        div { padding: 10px; border: 1px solid gray; width: 200px; margin: 10px; }
-        h2 { margin: 0 0 10px; }
-        ul { margin: 0; }
-        p { margin: 10px 0; }
-      `;
+        .card {
+            display: block;
+            position: relative;
+            background-color: cadetblue;
+            border-radius: 40px;
+            overflow: hidden;
+            width: 100%;
+        }
 
+        .img {
+            width: 40%;
+            object-fit: cover;
+        }
+
+        .card-inner {
+            display: flex;
+            align-items: stretch;
+            min-height: 240px;
+            max-height: 240px;
+            min-width: 600px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .content {
+            padding: 10px;
+            width: 60%;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+        }
+      `;
+        
       shadowRoot.appendChild(style);
+      
       shadowRoot.appendChild(templateContent.cloneNode(true));
     }
   }
