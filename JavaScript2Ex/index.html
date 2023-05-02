@@ -5,10 +5,84 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
     <body>
+        <h1>Ejercicio1</h1>
+        
         <h4>Comentarios adicionales</h4>
         <textarea id="comentario" cols="50" rows="12" oninput="verificar(this, 230, document.getElementById('leyenda'));"></textarea>
         <p id="maxCaracteres">Caracteres máximos: 230</p>
         <p id="leyenda">Usted tiene un espacio de 230 caracteres restantes.</p>
+
+        <br>
+        <h1>Ejercicio2</h1>
+
+            <style>
+                .card {
+                    display: block;
+                    position: relative;
+                    font: inherit;
+                    background-color: cadetblue;
+                    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    width: 100%;
+                }
+                .card:hover {
+                    transform: translate(-10px);
+                    box-shadow: 0 30px 50px -17px rgba(0, 0, 0, 0.3), 0 3px 20px rgba(0, 0, 0, 0.1);
+                }
+
+                .img {
+                    width: 40%;
+                    object-fit: cover;
+                }
+
+                .card-inner {
+                    display: flex;
+                    align-items: stretch;
+                    min-height: 100px;
+                    max-height: 100px;
+                    min-width: 600px;
+                    height: 100%;
+                    width: 100%;
+                }
+
+                .content {
+                    padding: 1rem;
+                    width: 60%;
+                }
+
+                .container {
+                    width: 100%;
+                    max-width: 500px;
+                    }
+            </style>
+            <div class="container">
+                <div class="card">
+                    <div class="card-inner">
+                        <img class="img" src="img/imageProfile.jpg" alt="">
+                        <div class="content">
+                            sdad
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <article class="card">
+                <div class="card-inner">
+                  <img src="https://images.unsplash.com/photo-1603996331944-dcb02c639178?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=4608&q=80" class="img" />
+                  <div class="content">
+                    <h1 class="title">Hello Planet Earth</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet consectetur, adipisicing elit.</p>
+                </div>
+              </article>
+        <template id="mi-tarjeta-template">
+
+</template>
+        
+        <mi-tarjeta>
+
+        </mi-tarjeta>
     </body>
     <script lang="JavaScript" src="js/scripts.js"></script>
 </html>
