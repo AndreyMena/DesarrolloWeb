@@ -14,16 +14,16 @@
 
         <br>
         <h1>Ejercicio2</h1>
-
         <template id="mi-tarjeta-template">
             <div class="container">
                 <div class="card">
                     <div class="card-inner">
                         <img class="img" src="img/imageProfile.jpg" alt="">
                         <div class="content">
-                            <H4>Andrey Mena Espinoza</H4>
-                            <p>Correo: andrey.menaespinoza@ucr.ac.cr</p>
-                            <p>GitHub: andreyest.12@gmail.com</p>
+                            <slot name="name"></slot>
+                            <slot name="email"></slot>
+                            <slot name="github"></slot>
+                            <slot name="number"></slot>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,10 @@
         </template>
         
         <mi-tarjeta>
-
+            <H4 slot="name">Andrey Mena Espinoza</H4>
+            <p slot="email">Correo: andrey.mesdsdsdnaespinoza@ucr.ac.cr</p>
+            <p slot="github">GitHub: andreyest.12@gmail.com</p>
+            <p slot="number">Numero: 6666-6666</p>
         </mi-tarjeta>
     </body>
     <script lang="JavaScript" src="js/scripts.js"></script>
