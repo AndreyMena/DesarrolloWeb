@@ -32,7 +32,6 @@
           </label>
         </div>
       </div>
-
       
     </div>
   </div>
@@ -43,10 +42,7 @@
     data() {
       return {
         name: "Andrey Mena Espinoza",
-        tasks: [{ action: "Buy Flowers", done: false },
-                { action: "Get Shoes", done: false },
-                { action: "Collect Tickets", done: true },
-                { action: "Call Joe", done: false }],
+        tasks: [],
         hideCompleted: true,
         newItemText: ""       
       }
@@ -62,9 +58,16 @@
         this.tasks.push({
           action: this.newItemText,
           done: false
-      });
-      this.newItemText = "";
+        });
+        localStorage.setItem("todos", JSON.stringify(this.tasks));
+        this.newItemText = "";
+      }
+    },
+    created() {
+      let data = localStorage.getItem("todos");
+      if (data != null) {
+        this.tasks = JSON.parse(data);
+      }
     }
   }
-}
 </script>
