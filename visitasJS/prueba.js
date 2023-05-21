@@ -34,7 +34,8 @@ const server = http.createServer((req, res) => {
 
     //post = null;
     //console.log(get.accion);
-    var post;
+    //var post;
+    //var post;
     if (req.method === 'POST') {
       let body = '';
       req.on('data', chunk => {
@@ -42,8 +43,12 @@ const server = http.createServer((req, res) => {
       });
       req.on('end', () => {
         post = querystring.parse(body)
-        console.log(post.nombre);
+        if (req.url == '/grabe') {
+            console.log(post.nombre);
+            grabe(post)
+        }
       });
+
     }
     
     console.log(req.url);
@@ -57,8 +62,8 @@ const server = http.createServer((req, res) => {
       //console.log("hey");
       break;
     case '/grabe':
-        console.log("uwu");
-        console.log(post.nombre);
+        //console.log("uwu");
+        //console.log(post.nombre);
         
         //grabe(post);
       break;
