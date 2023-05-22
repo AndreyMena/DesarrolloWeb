@@ -12,6 +12,26 @@ const port = 3000;
 
 const querystring = require('querystring');
 
+function liste(res) {
+    const archivo = fs.openSync('visitas.txt', 'r');
+    const registros = fs.readFileSync(archivo, 'utf-8').split('\n');
+
+    for (const registro of registros) {
+        const visita = registro.split(':');
+
+        console.log(visita)
+        //res.write(visita[2]);
+        //const comentario = visita[3].replace('<br />', '\n');
+
+        //res.write('<p><em>Comentario enviado por <a href="mailto:${visita[1]}">${visita[0]}</a>.</em><br />Fecha: ${visita[2]}<br /><q>${comentario}</q></p>');
+
+
+        res.write('<p><em>Comentario enviado por <a href="mailto:${'+visita[1]+'}">${'+visita[0]+'}</a>.</em><br />Fecha: ${'+visita[2]+'}<br /><q>${'+visita[3]+'}</q></p>');
+    }
+
+    fs.closeSync(archivo);
+}
+/*
 function liste(res)
 {
 	//archivo = fopen('visitas.txt', 'r');
@@ -29,16 +49,16 @@ function liste(res)
       //console.log('Contenido del archivo:', visita);
     });
 
-    /*
+    
 	while(registro = fs.readFile("visitas.txt")){
 		visita = explode(':', registro);
 		res.write( "<p><em>Comentario enviado por <a href=mailto:\"$visita[1]\">$visita[0]</a>.</em><br />Fecha: $visita[2]<br /><q>$visita[3]</q></p>");
 	} // while
 
 	fclose($archivo);
-    */
+    
 }
-
+*/
 
 function grabe(post) {
     const fecha = new Date();
