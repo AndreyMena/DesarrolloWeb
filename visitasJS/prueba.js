@@ -1,6 +1,6 @@
 
 
-const { fstat, access } = require('fs');
+//const { fstat, access } = require('fs');
 const fs = require('fs');
 const http = require('http');
 var url = require('url');
@@ -17,14 +17,16 @@ function liste(res)
 	//archivo = fopen('visitas.txt', 'r');
     const filePath = 'visitas.txt';
 
+    
     fs.readFile(filePath, 'utf8', (error, data) => {
-      if (error) {
-        console.error('Error al leer el archivo:', error);
-        return;
-      }
-      visita = data.split(':');
-      res.write( "<p><em>Comentario enviado por <a href=mailto:\"$visita[1]\">$visita[0]</a>.</em><br />Fecha: $visita[2]<br /><q>$visita[3]</q></p>");
-      console.log('Contenido del archivo:', visita);
+        if (error) {
+            console.error('Error al leer el archivo:', error);
+            return;
+        }
+        res.write("aaaaaaaaaaaaaaaaa")
+      //visita = data.split(':');
+      //res.write( "<p><em>Comentario enviado por <a href=mailto:\"$visita[1]\">$visita[0]</a>.</em><br />Fecha: $visita[2]<br /><q>$visita[3]</q></p>");
+      //console.log('Contenido del archivo:', visita);
     });
 
     /*
