@@ -16,17 +16,20 @@ function liste(res) {
     const archivo = fs.openSync('visitas.txt', 'r');
     const registros = fs.readFileSync(archivo, 'utf-8').split('\n');
 
+    var counter = 0;
     for (const registro of registros) {
+        counter++;
         const visita = registro.split(':');
+        if (visita.length === counter) {
 
-        console.log(visita)
-        //res.write(visita[2]);
-        //const comentario = visita[3].replace('<br />', '\n');
-
-        //res.write('<p><em>Comentario enviado por <a href="mailto:${visita[1]}">${visita[0]}</a>.</em><br />Fecha: ${visita[2]}<br /><q>${comentario}</q></p>');
-
-
-        res.write('<p><em>Comentario enviado por <a href="mailto:${'+visita[1]+'}">${'+visita[0]+'}</a>.</em><br />Fecha: ${'+visita[2]+'}<br /><q>${'+visita[3]+'}</q></p>');
+        }else{
+            console.log(visita.length)
+            //res.write(visita[2]);
+            //const comentario = visita[3].replace('<br />', '\n');
+    
+            //res.write('<p><em>Comentario enviado por <a href="mailto:${visita[1]}">${visita[0]}</a>.</em><br />Fecha: ${visita[2]}<br /><q>${comentario}</q></p>');
+            res.write('<p><em>Comentario enviado por <a href="mailto:'+visita[1]+'">'+visita[0]+'</a>.</em><br />Fecha: '+visita[2]+'<br /><q>'+visita[3]+'</q></p>');
+        }
     }
 
     fs.closeSync(archivo);
@@ -64,7 +67,7 @@ function grabe(post) {
     const fecha = new Date();
     fs.appendFile(
         'visitas.txt',
-    post.nombre + ':' + post.correo + ':' + fecha.getDay() + '/' + (fecha.getMonth()+1) + '/' + fecha.getYear() + ':' + post.comentario.replace('\n', '<br />').replace('\r\n', '') +"\n",
+    post.nombre + ':' + post.correo + ':' + fecha.getDay() + '/' + (fecha.getMonth()+1) + '/' + fecha.getYear() + ':' + post.comentario.replace('\n', '<br />').replace('\r\n', ''),
     function (error) {
         if (error) throw error;
             console.log('¡Visita añadida!');
@@ -111,7 +114,17 @@ const server = http.createServer((req, res) => {
     case '/grabe':
         //console.log("uwu");
         //console.log(post.nombre);
-        
+        const grabe = `
+                <p>
+                    Comentario agregado exitosamente
+                </p>
+
+            <a href="liste">Ver comentarios</a>
+            <br />
+            <br />
+            <a href="liste">Agregar otro comentario</a>
+            `;
+        res.end(grabe);
         //grabe(post);
       break;
     default:
@@ -121,14 +134,14 @@ const server = http.createServer((req, res) => {
             <input name="accion" type="hidden" value="grabe" />
             <p>Este formulario le permite enviar comentarios sobre este sitio.</p>
             <p>Nombre:
-                <input name="nombre" type="text" id="nombre" size="51" maxlength="50" />
+                <input name="nombre" type="text" id="nombre" size="51" maxlength="50" required/>
             </p>
             <p>Correo electr&oacute;nico:
-                <input name="correo" type="text" id="correo" size="51" maxlength="50" />
+                <input name="correo" type="text" id="correo" size="51" maxlength="50" required/>
             </p>
 
             <p>Comentario:
-                <textarea name="comentario" cols="50" rows="3" wrap="VIRTUAL" id="comentario"></textarea>
+                <textarea name="comentario" cols="50" rows="3" wrap="VIRTUAL" id="comentario" required></textarea>
             </p>
             <p>
                 <input name="Enviar" type="submit" id="Enviar" />
