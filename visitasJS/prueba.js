@@ -25,11 +25,23 @@ function liste(res) {
     fs.closeSync(archivo);
 }
 
+
+function getCurrentDate() {
+    const currentDate = new Date();
+    const day = String(currentDate.getDate()).padStart(2, '0');
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const year = currentDate.getFullYear();
+    return `${day}/${month}/${year}`;
+}
+
 function grabe(post) {
     const fecha = new Date();
+    //console.log(getCurrentDate()); // Ejemplo de uso: imprime la fecha actual en el formato "dd/mm/yyyy"
+
+    //console.log("Fecha: " + String(fecha.getDay()).padStart(2, '0') + '/' + String(fecha.getMonth()).padStart(2, '0') + '/' + fecha.getFullYear());
     fs.appendFile(
         'visitas.txt',
-    post.nombre + ':' + post.correo + ':' + fecha.getDay() + '/' + (fecha.getMonth()+1) + '/' + fecha.getYear() + ':' + post.comentario.replace('\n', '<br />').replace('\r\n', '')+"\n",
+    post.nombre + ':' + post.correo + ':' + getCurrentDate() + ':' + post.comentario.replace('\n', '<br />').replace('\r\n', '')+"\n",
     function (error) {
         if (error) throw error;
             console.log('¡Visita añadida!');
