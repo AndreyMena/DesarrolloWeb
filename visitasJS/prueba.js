@@ -18,9 +18,10 @@ function liste(res) {
 
     var counter = 0;
     for (const registro of registros) {
-        counter++;
+        //counter++;
         const visita = registro.split(':');
-        if (visita.length === counter) {
+        console.log(visita);
+        if (visita.length === 1) {
 
         }else{
             console.log(visita.length)
@@ -67,7 +68,7 @@ function grabe(post) {
     const fecha = new Date();
     fs.appendFile(
         'visitas.txt',
-    post.nombre + ':' + post.correo + ':' + fecha.getDay() + '/' + (fecha.getMonth()+1) + '/' + fecha.getYear() + ':' + post.comentario.replace('\n', '<br />').replace('\r\n', ''),
+    post.nombre + ':' + post.correo + ':' + fecha.getDay() + '/' + (fecha.getMonth()+1) + '/' + fecha.getYear() + ':' + post.comentario.replace('\n', '<br />').replace('\r\n', '')+"\n",
     function (error) {
         if (error) throw error;
             console.log('¡Visita añadida!');
@@ -121,7 +122,7 @@ const server = http.createServer((req, res) => {
 
             <a href="liste">Ver comentarios</a>
             <br />
-            <br />
+            
             <a href="liste">Agregar otro comentario</a>
             `;
         res.end(grabe);
