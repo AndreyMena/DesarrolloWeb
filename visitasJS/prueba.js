@@ -12,12 +12,37 @@ const port = 3000;
 
 const querystring = require('querystring');
 
+function liste(res)
+{
+	//archivo = fopen('visitas.txt', 'r');
+    const filePath = 'visitas.txt';
+
+    fs.readFile(filePath, 'utf8', (error, data) => {
+      if (error) {
+        console.error('Error al leer el archivo:', error);
+        return;
+      }
+      visita = data.split(':');
+      res.write( "<p><em>Comentario enviado por <a href=mailto:\"$visita[1]\">$visita[0]</a>.</em><br />Fecha: $visita[2]<br /><q>$visita[3]</q></p>");
+      console.log('Contenido del archivo:', visita);
+    });
+
+    /*
+	while(registro = fs.readFile("visitas.txt")){
+		visita = explode(':', registro);
+		res.write( "<p><em>Comentario enviado por <a href=mailto:\"$visita[1]\">$visita[0]</a>.</em><br />Fecha: $visita[2]<br /><q>$visita[3]</q></p>");
+	} // while
+
+	fclose($archivo);
+    */
+}
+
 
 function grabe(post) {
     const fecha = new Date();
     fs.appendFile(
         'visitas.txt',
-    post.nombre + ':' + post.correo + ':' + fecha.getDay() + '/' + (fecha.getMonth()+1) + '/' + fecha.getYear() + ':' + post.comentario.replace('\n', '<br />').replace('\r\n', ''),
+    post.nombre + ':' + post.correo + ':' + fecha.getDay() + '/' + (fecha.getMonth()+1) + '/' + fecha.getYear() + ':' + post.comentario.replace('\n', '<br />').replace('\r\n', '') +"\n",
     function (error) {
         if (error) throw error;
             console.log('¡Visita añadida!');
@@ -87,6 +112,8 @@ const server = http.createServer((req, res) => {
                 <input name="Enviar" type="submit" id="Enviar" />
             </p>
         </form>
+
+        <a href="liste">Ver comentarios</a>
     `;
     res.end(form2);
     }

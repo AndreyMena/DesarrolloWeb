@@ -48,6 +48,8 @@ const server = http.createServer((req, res) => {
             <input name="Enviar" type="submit" id="Enviar" />
         </p>
     </form>
+
+    <a href="liste">Ver comentarios</a>
   `;
 
 
